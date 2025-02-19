@@ -44,9 +44,14 @@
 <body>
   <div id="left-container">
     <div class="box-input" id="search-container" aria-label="search places">
-      <div id="c-search-input"> <input type="text" tabindex="0" id="search-input" placeholder="Search Places" />
+
+      <div id="c-search-input">
+        <label for="search-input">
+          <input type="text" tabindex="0" id="search-input" placeholder="Search Places" />
+        </label>
         <button tabindex="0" id="searchbutton" aria-label="click to search"><i class="fa fa-search"></i></button>
       </div>
+
       <div id="searchdetails" tabindex="0" class="searchdetails" style="display: none" aria-label="Search results">
         <button class="fas fa-times-circle" id="closeBtnD" aria-label="Close details tab"
           onclick="notifySreenReader(`details tab closed`)"></button>
@@ -56,14 +61,15 @@
     </div>
 
     <button class="fas fa-directions" tabindex="0" id="trigger-icon" aria-label="find distance between places"></button>
+
   </div>
 
   <div tabindex="0" id="controls-box">
 
-    <button title="Click to Zoom-In" aria-label="Click to Zoom-In" class="fa fa-plus" title="Zoom In"></button>
-    <button title="Click to Zoom-Out" aria-label="Click to Zoom-Out" class="fa fa-minus" title="Zoom Out"></button>
-    <button title="Click to select Layers" aria-label="Click to select layers" class="fa fa-layer-group" title="Layers"
-      id="layers-btn"></button>
+    <button aria-label="Click to Zoom-In" class="fa fa-plus" title="Zoom In"></button>
+    <button aria-label="Click to Zoom-Out" class="fa fa-minus" title="Zoom Out"></button>
+    <button aria-label="Click to select layers" class="fa fa-layer-group" title="Layers"
+            id="layers-btn"></button>
     <div id="layers-dropdown" class="dropdown-content">
       <button title="geographical-layer" aria-label="geographical-layer" id="geographical-layer">Geographical</button>
       <button title="political-layer" aria-label="political-layer" id="political-layer">Political</button>
